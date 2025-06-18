@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+tmux new-window -n 📝TextEditor "nvim $1"

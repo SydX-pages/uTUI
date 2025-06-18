@@ -1,0 +1,23 @@
+#!/bin/zsh
+
+SRC_PATH="$1"
+
+if [ ! -f "$SRC_PATH" ]; then
+    echo "file "$SRC_PATH" does not exist"
+fi
+
+FILE_NAME=$(basename "$SRC_PATH")
+TARG_PATH="/data/data/com.termux/files/home/$FILE_NAME"
+cp "$SRC_PATH" "$TARG_PATH"
+
+CMD_FILE="/data/data/com.termux/files/home/audio_cmds/play_$FILE_NAME.sh"
+
+cat <<EOF > "$CMD_FILE"
+#!/bin/zsh
+mpv "$TARG_PATH"
+rm "$TARG_PATH"
+rm "$CMD_FILE"
+EOF
+
+chmod +x "$CMD_FILE"
+txa Audio_Player

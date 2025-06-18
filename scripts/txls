@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+/data/data/com.termux/files/usr/bin/tmux -S /data/data/com.termux/files/usr/var/run/tmux-10310/default ls

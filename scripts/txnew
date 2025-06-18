@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+SESSION_NAME="$1"
+
+/data/data/com.termux/files/usr/bin/tmux -S /data/data/com.termux/files/usr/var/run/tmux-10310/default new -d -s $SESSION_NAME\; set-option prefix C-a \; bind-key C-a send-prefix
+
+txa $SESSION_NAME
