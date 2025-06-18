@@ -4,14 +4,14 @@ while true; do
   clear
   # Menu
   choices=(
-    "📁FileManager::$HOME/desktop/apps/file_manager.sh"
-    "📝TextEditor::$HOME/desktop/apps/text_editor.sh"
-    "🌐WebBrowser::$HOME/desktop/apps/web_browser.sh"
-    "💻Terminal::$HOME/desktop/apps/terminal.sh"
-    "📊SysMonitor::$HOME/desktop/apps/system_monitor.sh"
-    "🎹Demucs::$HOME/desktop/apps/demucs.sh"
-    "🎵MusicPlayer::$HOME/desktop/apps/Audio_Player.sh"
-    "😀EmojiPrinter::$HOME/desktop/apps/emoji_fzf.sh"
+    "📁FileManager::$HOME/uTUI/apps/file_manager.sh"
+    "📝TextEditor::$HOME/uTUI/apps/text_editor.sh"
+    "🌐WebBrowser::$HOME/uTUI/apps/web_browser.sh"
+    "💻Terminal::$HOME/uTUI/apps/terminal.sh"
+    "📊SysMonitor::$HOME/uTUI/apps/system_monitor.sh"
+    "🎹Demucs::$HOME/uTUI/apps/demucs.sh"
+    "🎵MusicPlayer::$HOME/uTUI/apps/Audio_Player.sh"
+    "😀EmojiPrinter::$HOME/uTUI/apps/emoji_fzf.sh"
     "🚪Exit::exit"
   )
 

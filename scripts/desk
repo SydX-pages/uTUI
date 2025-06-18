@@ -8,12 +8,12 @@ if tmux has-session -t $session 2>/dev/null; then
     if [ "$choice" = "a" ]; then
         tmux attach-session -t $session
     elif [ "$choice" = "n" ]; then
-        tmux new-session -s "💻Desk_new" -n "🏠Home" "$HOME/desktop/desktop.sh"
+        tmux new-session -s "💻Desk_new" -n "🏠Home" "$HOME/uTUI/desktop.sh"
 
     else
         exit 0;
     fi 
 else
   echo "Session '$session' doesn't exist，setting..."
-  tmux new-session -s "$session" -n "🏠Home" "$HOME/desktop/desktop.sh"
+  tmux new-session -s "$session" -n "🏠Home" "$HOME/uTUI/desktop.sh"
 fi
