@@ -4,18 +4,19 @@ while true; do
   clear
   # Menu
   choices=(
-    "📁FileManager::$HOME/uTUI/apps/file_manager.sh"
-    "📝TextEditor::$HOME/uTUI/apps/text_editor.sh"
-    "🌐WebBrowser::$HOME/uTUI/apps/web_browser.sh"
-    "💻Terminal::$HOME/uTUI/apps/terminal.sh"
-    "📊SysMonitor::$HOME/uTUI/apps/system_monitor.sh"
-    "🎹Demucs::$HOME/uTUI/apps/demucs.sh"
-    "🎵MusicPlayer::$HOME/uTUI/apps/Audio_Player.sh"
-    "😀EmojiPrinter::$HOME/uTUI/apps/emoji_fzf.sh"
-    "🚪Exit::exit"
+    "\e[38;5;220m\e[0m|FileManager::$HOME/uTUI/apps/file_manager.sh"
+    "\e[38;5;82m\e[0m|Terminal::$HOME/uTUI/apps/terminal.sh"
+    "\e[38;5;82m\e[0m|AndroidApps::$HOME/uTUI/androidApps.sh"
+    "\e[38;5;39m󱓩\e[0m|TextEditor::$HOME/uTUI/apps/text_editor.sh"
+    "\e[38;5;44m󰞉\e[0m|WebBrowser::$HOME/uTUI/apps/web_browser.sh"
+    "\e[38;5;202m󰄨\e[0m|SysMonitor::$HOME/uTUI/apps/system_monitor.sh"
+    "\e[38;5;245m󰙽\e[0m|Demucs::$HOME/uTUI/apps/demucs.sh"
+    "\e[38;5;135m\e[0m|MusicPlayer::$HOME/uTUI/apps/Audio_Player.sh"
+    "\e[38;5;220m\e[0m|EmojiPrinter::$HOME/uTUI/apps/emoji_fzf.sh"
+    "\e[38;5;160m\e[0m|Exit::exit"
   )
 
-  selected=$(printf '%s\n' "${choices[@]}" | fzf --reverse --prompt="Desktop (Prefix+F for fzf)" --ansi)
+  selected=$(printf '%b\n' "${choices[@]}" | fzf --reverse --prompt="Desktop (Prefix+F for fzf)" --ansi)
 
   if [ -z "$selected" ]; then
     echo "No chosen.Return to Menu..."

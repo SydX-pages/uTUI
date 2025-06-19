@@ -1,4 +1,4 @@
 #!/bin/zsh
-#cd in terminal
+#cd from ranger in terminal
 
-tmux new-window -n 💻Terminal -c $1
+tmux new-window -n "|Terminal" -c $1

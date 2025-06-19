@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+session=$1
+cmd=$2
+
+/data/data/com.termux/files/usr/bin/tmux -S /data/data/com.termux/files/usr/var/run/tmux-10310/default send-keys -t "$session" "$cmd" Enter

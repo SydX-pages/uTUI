@@ -1,16 +1,16 @@
 #!/bin/zsh
 
-EMOJI_JSON=$HOME/desktop/emoji.json
+EMOJI_JSON=$HOME/uTUI/emoji.json
 
 while true; do
   emoji=$(
     (
-      echo "❌ exit"
+      echo "|exit"
       jq -r '.[] | "\(.emoji) \(.description)"' "$EMOJI_JSON"
     ) | fzf --height=40% --border --prompt="Pick emoji: " | awk '{print $1}'
   )
 
-  if [ -z "$emoji" ] || [ "$emoji" = "❌" ]; then
+  if [ -z "$emoji" ] || [ "$emoji" = "|" ]; then
     echo "退出 emoji 选择器"
     break
   fi
