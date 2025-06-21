@@ -1,2 +1,2 @@
 #!/bin/zsh
-w3m ~/desktop/url_guider.html
+w3m ~/uTUI/url_guider.html

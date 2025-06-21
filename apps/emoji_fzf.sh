@@ -10,8 +10,9 @@ while true; do
     ) | fzf --height=40% --border --prompt="Pick emoji: " | awk '{print $1}'
   )
 
-  if [ -z "$emoji" ] || [ "$emoji" = "|" ]; then
-    echo "退出 emoji 选择器"
+  if [ -z "$emoji" ] || [ "$emoji" = "|exit" ]; then
+    echo "Exiting..."
+    sleep 1
     break
   fi
 

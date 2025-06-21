@@ -166,7 +166,7 @@ while true; do
                     tmux split-window -l 2 "echo 'SubMenu Loaded...';tmux popup -w 60% -h 80% "$HOME/uTUI/androidApps/androidApps_Wall.sh""
                     ;;
                 "With Termux")
-                    tmux split-window -l 2 "echo 'SubMenu Loaded...';tmux popup -w 60% -h 80% "$HOME/uTUI/androidApps/androidApps_withTermux.sh.sh""
+                    tmux split-window -l 2 "echo 'SubMenu Loaded...';tmux popup -w 60% -h 80% "$HOME/uTUI/androidApps/androidApps_withTermux.sh""
                     ;;
                 *)
                     continue
