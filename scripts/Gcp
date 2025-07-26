@@ -1,7 +1,4 @@
 #!/bin/zsh
 
-echo "Your IPAddr:"
-read -r ip
-
-ssh syd_w@$ip
+ssh -i ~/.ssh/googleC syd_w@35.212.201.148
 

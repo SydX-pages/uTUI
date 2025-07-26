@@ -4,6 +4,8 @@ echo "Your Username:"
 read -r name
 echo "Your IPAddr:"
 read -r ip
+echo "Your Port:"
+read -r port
 
-ssh $name@$ip
+ssh -p $port $name@$ip
 

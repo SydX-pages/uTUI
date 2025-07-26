@@ -3,5 +3,5 @@
 echo "Your IPAddr:"
 read -r ip
 
-ssh u0_a201@$ip
+ssh -p 8022 u0_a201@$ip
 

@@ -27,12 +27,12 @@ while true;do
                 ;;
             Exit)
                 echo "Quiting..."
-                sleep 2
+                sleep 1
                 exit
                 ;;
             *)
                 echo "Unknown Server..."
-                sleep 2
+                sleep 1
                 continue
                 ;;
         esac
