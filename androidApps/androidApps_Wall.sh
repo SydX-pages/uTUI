@@ -6,12 +6,13 @@ while true; do
   choices=(
     "\e[38;5;160m\e[0m|<Exit>::"
     "\e[38;5;150m\e[0m|Chrome<com.android.chrome>::"
-    "\e[38;5;24m󰟾\e[0m|Clash<com.github.kr328.Clash>::"
+    "\e[38;5;24m󰟾\e[0m|Clash<com.github.kr328.clash>::"
     "\e[38;5;210m󰬺\e[0m|Cloudflare One<com.cloudflare.cloudflareoneagent>::"
     "\e[38;5;39m󰇩\e[0m|Edge<com.microsoft.emmx>::"
     "\e[38;5;202m󰊫\e[0m|Gmail<com.google.android.gm>::"
     "\e[38;5;202m󰊼\e[0m|Play 商店<com.android.vending>::GooglePlay"
     "\e[38;5;39m\e[0m|Telegram<org.telegram.messenger>::"
+    "\e[38;5;39m\e[0m|v2rayNG<com.v2ray.ang>::"
     "\e[38;5;160m\e[0m|Youtube<com.google.android.youtube>::"
     )
 

@@ -5,6 +5,7 @@ while true; do
   # Menu
   choices=(
     "\e[38;5;160m\e[0m|<Exit>::"
+    "\e[38;5;39m\e[0m|<HOME>::"
     "\e[38;5;45m---Groups---"
     "\e[38;5;10m\e[0m|Most-used Apps"
     "\e[38;5;230m\e[0m|Work and Learn"
@@ -28,7 +29,7 @@ while true; do
     "\e[38;5;245m"
     "\e[38;5;45m----------C----------"
     "\e[38;5;150m\e[0m|Chrome<com.android.chrome>::"
-    "\e[38;5;24m󰟾\e[0m|Clash<com.github.kr328.Clash>::"
+    "\e[38;5;24m󰟾\e[0m|Clash<com.github.kr328.clash>::"
     "\e[38;5;210m󰬺\e[0m|Cloudflare One<com.cloudflare.cloudflareoneagent>::"
     "\e[38;5;215m\e[0m|CSDN<net.csdn.csdnplus>::"
     "\e[38;5;245m"
@@ -91,10 +92,11 @@ while true; do
     "\e[38;5;39m󰖕\e[0m|天气<com.miui.weather2>::TianQi"
     "\e[38;5;135m\e[0m|Tasker<net.dinglisch.android.taskerm>::"
     "\e[38;5;39m\e[0m|Telegram<org.telegram.messenger>::"
-    "\e[38;5;245m"
+    "\e[38;5;;245m"
     "\e[38;5;45m----------U----------"
     "\e[38;5;245m"
     "\e[38;5;45m----------V----------"
+    "\e[38;5;39m\e[0m|v2rayNG<com.v2ray.ang>::"
     "\e[38;5;245m"
     "\e[38;5;45m----------W----------"
     "\e[38;5;160m󰫔\e[0m|网易云音乐<com.netease.cloudmusic>::wyyMusic"
@@ -178,27 +180,13 @@ while true; do
                 echo "Going Back..."
                 sleep 1
                 break
+            elif [ "$selected" = "HOME" ]; then
+                txk "AppLauncher" "/data/data/com.termux/files/home/Scripts/HOME.sh"
+                echo "Going to HomePage..."
+                sleep 1
             else
-                choices=(
-                    "\e[38;5;82m\e[0m|Launch App"
-                    "\e[38;5;10m\e[0m|App Settings"
-                    "\e[38;5;160m\e[0m|Cancel"
-                )
-                act=$(printf '%b\n' "${choices[@]}" | fzf --reverse --prompt="Android Apps" --ansi)
-                act=$(echo "$act" | awk -F "|" '{print $2}')
-                if [ "$act" = "Cancel" ]; then
-                    continue
-                elif [ "$act" = "Launch App" ]; then
-                    act=1
-                    action="Launching:"
-                else
-                    act=0
-                    action="Jumping to Settings:"
-                fi
-                txk "AppLauncher" "/data/data/com.termux/files/home/Scripts/LaunchApp.sh "$act" \"$selected\""
-                echo "$action $name..."
-                sleep 3
-            fi
+                tmux split-window -l 2 "echo 'Choosing...';popup_Chooser.sh $selected $name"
+           fi
         fi
         ;;
     esac

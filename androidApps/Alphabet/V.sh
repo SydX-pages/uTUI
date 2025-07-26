@@ -6,6 +6,7 @@ while true; do
   choices=(
     "\e[38;5;160m\e[0m|<Exit>::"
     "-V-"
+    "\e[38;5;39m\e[0m|v2rayNG<com.v2ray.ang>::"
    )
 
   selected=$(printf '%b\n' "${choices[@]}" | fzf --reverse --prompt="Apps:" --ansi)

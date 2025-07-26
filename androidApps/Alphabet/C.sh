@@ -7,7 +7,7 @@ while true; do
     "\e[38;5;160m\e[0m|<Exit>::"
     "-C-"
     "\e[38;5;150m\e[0m|Chrome<com.android.chrome>::"
-    "\e[38;5;24m󰟾\e[0m|Clash<com.github.kr328.Clash>::"
+    "\e[38;5;24m󰟾\e[0m|Clash<com.github.kr328.clash>::"
     "\e[38;5;210m󰬺\e[0m|Cloudflare One<com.cloudflare.cloudflareoneagent>::"
     "\e[38;5;215m\e[0m|CSDN<net.csdn.csdnplus>::"
    )

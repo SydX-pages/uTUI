@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+echo "Your Username:"
+read -r name
+echo "Your IPAddr:"
+read -r ip
+
+ssh $name@$ip
+
